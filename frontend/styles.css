@@ -1,0 +1,24 @@
+*{box-sizing:border-box;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+body{margin:0;background:#05070f;color:#eef2ff;min-height:100vh;padding:32px}
+main{max-width:960px;margin:0 auto}
+header{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:24px}
+.eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:.8rem;color:#7e88ad}
+h1{margin:4px 0;font-size:2.3rem}
+.lede{color:#a6b0d6;font-size:1rem;margin-top:4px}
+.status{font-size:.9rem;color:#7e88ad;text-align:right}
+form{display:flex;flex-direction:column;gap:20px}
+section{background:#101424;border:1px solid #1b2138;border-radius:16px;padding:20px}
+section h2{margin-top:0;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#9bdcff}
+label{display:flex;flex-direction:column;font-size:.9rem;color:#cbd3f0;gap:6px}
+input,select,textarea{border:1px solid #232b46;border-radius:10px;padding:10px 12px;background:#0b111f;color:#eef2ff;font-size:1rem}
+input:focus,select:focus,textarea:focus{outline:2px solid #00d4ff}
+textarea{resize:vertical}
+.grid{display:grid;gap:16px}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid.three{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.hint{font-size:.85rem;color:#8d96bf;margin-bottom:12px}
+button{align-self:flex-end;background:linear-gradient(120deg,#00d4ff,#7b61ff);border:none;border-radius:999px;padding:14px 34px;font-size:1rem;font-weight:600;color:#05070f;cursor:pointer;transition:transform .2s,opacity .2s}
+button:hover{transform:translateY(-2px)}
+button:disabled{opacity:.6;cursor:not-allowed}
+.success{color:#4ade80}
+.error{color:#fb7185}

@@ -1,0 +1,12 @@
+{
+  "name": "recruiting-form-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Static site'"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  }
+}

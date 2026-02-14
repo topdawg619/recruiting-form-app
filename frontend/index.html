@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In Game / Site Visit Recruiting Sheet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">Agentra • Recruiting Ops</p>
+        <h1>In Game / Site Visit Recruiting Sheet</h1>
+        <p class="lede">Capture evaluations in the field and instantly email the staff distribution list.</p>
+      </div>
+      <div class="status" id="status">All fields are required unless noted.</div>
+    </header>
+
+    <form id="recruiting-form">
+      <section>
+        <h2>Scout & Prospect Basics</h2>
+        <div class="grid two">
+          <label>Scout Position Coach Name
+            <input type="text" name="scoutName" required>
+          </label>
+          <label>Prospect Name
+            <input type="text" name="prospectName" required>
+          </label>
+          <label>Prospect School
+            <input type="text" name="prospectSchool" required>
+          </label>
+          <label>Prospect Position
+            <input type="text" name="prospectPosition" required>
+          </label>
+          <label>Prospect Jersey #
+            <input type="text" name="jersey" required>
+          </label>
+          <label>Height (ex: 6'2")
+            <input type="text" name="height" required>
+          </label>
+          <label>Weight (lbs)
+            <input type="number" name="weight" required>
+          </label>
+          <label>GPA
+            <input type="text" name="gpa" required>
+          </label>
+          <label>Prospect's Desired Major
+            <input type="text" name="major" required>
+          </label>
+          <label>Class Year
+            <select name="classYear" required>
+              <option value="" selected disabled>Select one</option>
+              <option>2024</option>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+              <option>2028</option>
+            </select>
+          </label>
+          <label>Prospect Class Type
+            <select name="classType" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Freshman</option>
+              <option>Sophomore</option>
+              <option>Junior</option>
+              <option>Senior</option>
+              <option>JUCO</option>
+            </select>
+          </label>
+          <label>Type of Visit
+            <select name="visitType" required>
+              <option value="" selected disabled>Select type</option>
+              <option>Game - Home</option>
+              <option>Game - Away</option>
+              <option>Practice</option>
+              <option>Campus Visit</option>
+              <option>In-home</option>
+              <option>Virtual / Phone</option>
+            </select>
+          </label>
+          <label>Contact Phone
+            <input type="tel" name="contactPhone">
+          </label>
+          <label>Contact Twitter / IG
+            <input type="text" name="contactSocial">
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <h2>Assessments</h2>
+        <label>Character impression of the prospect based on in-person and/or phone?
+          <textarea name="characterImpression" rows="4" required></textarea>
+        </label>
+        <label>Coach evaluation / comments
+          <textarea name="coachComments" rows="5" required></textarea>
+        </label>
+      </section>
+
+      <section>
+        <h2>Email Distribution</h2>
+        <p class="hint">Enter the staff email addresses that should receive this report (comma separated or add up to three).</p>
+        <div class="grid three">
+          <label>Email #1
+            <input type="email" name="email1" required>
+          </label>
+          <label>Email #2
+            <input type="email" name="email2">
+          </label>
+          <label>Email #3
+            <input type="email" name="email3">
+          </label>
+        </div>
+      </section>
+
+      <button type="submit" id="submit-btn">Submit Report</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
