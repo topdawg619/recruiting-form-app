@@ -3,7 +3,7 @@
 Web form + Netlify Function that emails the recruiting report through Gmail.
 
 ## Stack
-- Frontend: static HTML/CSS/JS (`frontend/`), designed for GitHub Pages or Netlify.
+- Frontend: static HTML/CSS/JS (`docs/`), designed for GitHub Pages or Netlify.
 - Backend: Netlify Function (`netlify/functions/send-email.js`) using Nodemailer to send mail via Gmail SMTP.
 
 ## Local dev
@@ -18,6 +18,10 @@ npm run dev   # runs netlify dev (needs Netlify CLI)
    - `GMAIL_USER` – `iamjarvisbot619@gmail.com`
    - `GMAIL_APP_PASSWORD` – `jlfs bvdm zykn ftmg`
 3. Deploy. Form submissions POST to `/.netlify/functions/send-email` automatically.
+
+## GitHub Pages
+- GitHub Pages is configured to serve from the `docs/` folder on the `master` branch.
+- Pages URL: `https://topdawg619.github.io/recruiting-form-app/`
 
 ## Form behavior
 - Collects scout info, prospect vitals, visit notes, and email recipients.
