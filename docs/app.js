@@ -16,6 +16,7 @@ form.addEventListener('submit', async (event) => {
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
