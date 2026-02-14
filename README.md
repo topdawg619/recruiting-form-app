@@ -1,33 +1,30 @@
 # In Game / Site Visit Recruiting Sheet
 
-Web form + Netlify Function that emails the recruiting report through Gmail.
+Web form hosted on GitHub Pages that submits to Formspree, emailing the recruiting report to whatever addresses the scout enters.
+
+## Live URL
+- **https://topdawg619.github.io/recruiting-form-app/**
 
 ## Stack
-- Frontend: static HTML/CSS/JS (`docs/`), designed for GitHub Pages or Netlify.
-- Backend: Netlify Function (`netlify/functions/send-email.js`) using Nodemailer to send mail via Gmail SMTP.
+- Frontend: static HTML/CSS/JS (`docs/`)
+- Form submission: [Formspree](https://formspree.io/) endpoint `https://formspree.io/f/xeelgjal`
 
 ## Local dev
 ```bash
 npm install
-npm run dev   # runs netlify dev (needs Netlify CLI)
+npx servor docs 8080  # or any static server
 ```
-
-## Deployment (Netlify)
-1. Create a Netlify site pointing to this repo.
-2. Set environment variables on Netlify:
-   - `GMAIL_USER` – `iamjarvisbot619@gmail.com`
-   - `GMAIL_APP_PASSWORD` – `jlfs bvdm zykn ftmg`
-3. Deploy. Form submissions POST to `/.netlify/functions/send-email` automatically.
-
-## GitHub Pages
-- GitHub Pages is configured to serve from the `docs/` folder on the `master` branch.
-- Pages URL: `https://topdawg619.github.io/recruiting-form-app/`
 
 ## Form behavior
 - Collects scout info, prospect vitals, visit notes, and email recipients.
 - Requires at least one email field.
-- Success/failure messaging shown in-page.
+- On submit it POSTs JSON to Formspree and shows success/failure messaging inline.
 
-## Security
-- App password is single-purpose; rotate via Google Account → Security → App passwords.
-- Netlify hides env vars; frontend never sees the Gmail password.
+## Formspree setup (already done)
+- Endpoint: `https://formspree.io/f/xeelgjal`
+- Form submits JSON (via fetch) — see `docs/script.js`
+- Update destination email addresses inside Formspree dashboard if needed.
+
+## Notes
+- Previous Nodemailer/Netlify backend is retained for reference under `netlify/functions/` but is no longer required.
+- If you prefer serverless email again, swap the endpoint in `docs/script.js` back to your own API.

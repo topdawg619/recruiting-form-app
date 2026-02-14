@@ -1,4 +1,4 @@
-const API_URL = '/.netlify/functions/send-email';
+const API_URL = 'https://formspree.io/f/xeelgjal';
 
 const form = document.getElementById('recruiting-form');
 const statusEl = document.getElementById('status');
